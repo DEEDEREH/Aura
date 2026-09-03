@@ -36,11 +36,6 @@ body {
     font-size: 42px;
 }
 
-.header p {
-    margin-bottom: 0;
-    color: #999;
-}
-
 p {
     border-style: solid;
     text-align: center;
