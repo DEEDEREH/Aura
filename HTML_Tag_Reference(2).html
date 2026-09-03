@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <head> contains information ABOUT the webpage, such as its title and metadata. -->
+    <meta charset="UTF-8">
+    <!-- <meta> provides information about the webpage to browsers and search engines. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title> sets the text shown in the browser tab. -->
+    <title>HTML Tag Reference</title>
+</head>
+<body>
+    <!-- <body> contains everything normally visible on the webpage. -->
+
+    <!-- ===================================================== -->
+    <!-- DOCUMENT STRUCTURE -->
+    <!-- ===================================================== -->
+
+    <!-- <!DOCTYPE html> tells the browser to use modern HTML. -->
+    <!DOCTYPE html>
+
+    <!-- <html> is the root element containing the entire HTML document. -->
+    <h1>HTML Tag Reference</h1>
+
+    <!-- <header> contains introductory content or navigation for a page/section. -->
+    <header>Header content</header>
+
+    <!-- <nav> contains navigation links. -->
+    <nav><a href="#text">Text</a></nav>
+
+    <!-- <main> contains the main content of the page. -->
+    <main>
+
+        <!-- <section> groups related content together. -->
+        <section id="text">
+
+            <!-- <h1> through <h6> create headings from largest/most important to smallest. -->
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+
+            <!-- <p> creates a paragraph. -->
+            <p>This is a paragraph.</p>
+
+            <!-- <br> creates a line break. -->
+            Line 1<br>Line 2
+
+            <!-- <hr> creates a thematic horizontal divider. -->
+            <hr>
+
+            <!-- ===================================================== -->
+            <!-- TEXT FORMATTING -->
+            <!-- ===================================================== -->
+
+            <!-- <strong> marks text as strongly important. -->
+            <strong>Important text</strong>
+
+            <!-- <em> emphasizes text. -->
+            <em>Emphasized text</em>
+
+            <!-- <b> draws attention to text without adding importance. -->
+            <b>Bold text</b>
+
+            <!-- <i> represents text in an alternate voice or mood. -->
+            <i>Italic text</i>
+
+            <!-- <u> represents underlined text. -->
+            <u>Underlined text</u>
+
+            <!-- <s> represents text that is no longer accurate or relevant. -->
+            <s>Old information</s>
+
+            <!-- <mark> highlights text. -->
+            <mark>Highlighted text</mark>
+
+            <!-- <small> represents smaller text. -->
+            <small>Small text</small>
+
+            <!-- <del> represents deleted content. -->
+            <del>Deleted text</del>
+
+            <!-- <ins> represents inserted content. -->
+            <ins>Inserted text</ins>
+
+            <!-- <sub> creates subscript text. -->
+            H<sub>2</sub>O
+
+            <!-- <sup> creates superscript text. -->
+            x<sup>2</sup>
+
+            <!-- <abbr> defines an abbreviation. -->
+            <abbr title="HyperText Markup Language">HTML</abbr>
+
+            <!-- <q> creates a short inline quotation. -->
+            <q>Short quote</q>
+
+            <!-- <blockquote> represents a longer quotation. -->
+            <blockquote>Long quoted text.</blockquote>
+
+            <!-- <cite> identifies the title of a creative work. -->
+            <cite>Example Book</cite>
+
+            <!-- <code> represents computer code. -->
+            <code>console.log("Hello");</code>
+
+            <!-- <pre> preserves spaces and line breaks. -->
+            <pre>Text
+    keeps
+        its formatting.</pre>
+
+            <!-- <kbd> represents keyboard input. -->
+            Press <kbd>Ctrl</kbd> + <kbd>C</kbd>
+
+            <!-- <samp> represents sample computer output. -->
+            <samp>Program finished.</samp>
+
+            <!-- <var> represents a variable. -->
+            <var>x</var> = 10
+
+            <!-- <time> represents a date or time. -->
+            <time datetime="2026-08-19">August 19, 2026</time>
+
+            <!-- <data> connects visible content to a machine-readable value. -->
+            <data value="123">Product 123</data>
+
+            <!-- <span> is a generic inline container. -->
+            <span>Inline content</span>
+
+            <!-- <div> is a generic block container. -->
+            <div>Block content</div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- LINKS -->
+        <!-- ===================================================== -->
+
+        <!-- <a> creates a hyperlink. -->
+        <a href="https://example.com">Visit Example</a>
+
+        <!-- <link> connects the page to an external resource, commonly CSS. -->
+        <!-- Example: <link rel="stylesheet" href="style.css"> -->
+
+        <!-- <base> sets the base URL for relative URLs. -->
+        <!-- Example: <base href="https://example.com/"> -->
+
+        <!-- ===================================================== -->
+        <!-- IMAGES AND MEDIA -->
+        <!-- ===================================================== -->
+
+        <!-- <img> displays an image. -->
+        <img src="image.jpg" alt="Example image">
+
+        <!-- <picture> allows different images to be selected based on conditions. -->
+        <picture>
+            <source media="(min-width: 800px)" srcset="large.jpg">
+            <img src="small.jpg" alt="Responsive image">
+        </picture>
+
+        <!-- <source> provides a media source for <audio>, <video>, or <picture>. -->
+
+        <!-- <audio> embeds audio. -->
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- <video> embeds video. -->
+        <video controls width="320">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <!-- <track> adds captions/subtitles or other timed text to media. -->
+        <!-- Example: <track src="captions.vtt" kind="subtitles" srclang="en"> -->
+
+        <!-- <iframe> embeds another webpage or document. -->
+        <iframe src="about:blank" title="Example iframe"></iframe>
+
+        <!-- <object> embeds an external resource. -->
+        <object data="example.pdf" type="application/pdf">PDF</object>
+
+        <!-- <embed> embeds external content. -->
+        <embed src="example.pdf" type="application/pdf">
+
+        <!-- <map> creates an image map. -->
+        <map name="examplemap">
+            <!-- <area> creates a clickable area inside an image map. -->
+            <area shape="rect" coords="0,0,100,100" href="https://example.com" alt="Example">
+        </map>
+
+        <!-- <canvas> creates a drawing area controlled by JavaScript. -->
+        <canvas width="300" height="150">Canvas</canvas>
+
+        <!-- <svg> creates scalable vector graphics. -->
+        <svg width="100" height="100" aria-label="Circle">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="black"></circle>
+        </svg>
+
+        <!-- <math> contains MathML mathematical markup. -->
+        <math><mi>x</mi><mo>=</mo><mn>10</mn></math>
+
+        <!-- ===================================================== -->
+        <!-- LISTS -->
+        <!-- ===================================================== -->
+
+        <!-- <ul> creates an unordered/bulleted list. -->
+        <ul>
+            <!-- <li> creates a list item. -->
+            <li>Item one</li>
+            <li>Item two</li>
+        </ul>
+
+        <!-- <ol> creates an ordered/numbered list. -->
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+        </ol>
+
+        <!-- <dl> creates a description list. -->
+        <dl>
+            <!-- <dt> contains a term. -->
+            <dt>HTML</dt>
+            <!-- <dd> contains the term's description. -->
+            <dd>A markup language used to structure webpages.</dd>
+        </dl>
+
+        <!-- ===================================================== -->
+        <!-- TABLES -->
+        <!-- ===================================================== -->
+
+        <!-- <table> creates a table. -->
+        <table>
+            <!-- <caption> gives the table a title. -->
+            <caption>Example Table</caption>
+
+            <!-- <colgroup> groups table columns. -->
+            <colgroup>
+                <!-- <col> represents a table column. -->
+                <col>
+                <col>
+            </colgroup>
+
+            <!-- <thead> contains table header rows. -->
+            <thead>
+                <tr>
+                    <!-- <th> creates a header cell. -->
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+
+            <!-- <tbody> contains the main table rows. -->
+            <tbody>
+                <!-- <tr> creates a table row. -->
+                <tr>
+                    <!-- <td> creates a normal table cell. -->
+                    <td>Jackson</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+
+            <!-- <tfoot> contains table footer rows. -->
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>100</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- ===================================================== -->
+        <!-- FORMS -->
+        <!-- ===================================================== -->
+
+        <!-- <form> groups controls used to submit user information. -->
+        <form action="#" method="get">
+
+            <!-- <label> labels a form control. -->
+            <label for="name">Name:</label>
+
+            <!-- <input> creates a form control. -->
+            <input type="text" id="name" name="name">
+
+            <!-- Common input types: text, password, email, number, date, -->
+            <!-- time, checkbox, radio, file, color, range, search, tel, -->
+            <!-- url, submit, reset, button, hidden, month, week, datetime-local. -->
+
+            <!-- <button> creates a clickable button. -->
+            <button type="submit">Submit</button>
+
+            <!-- <textarea> creates a multi-line text box. -->
+            <textarea rows="4" cols="30">Type here...</textarea>
+
+            <!-- <select> creates a drop-down list. -->
+            <select>
+                <!-- <option> creates an item inside a select/datalist. -->
+                <option>Option 1</option>
+                <option>Option 2</option>
+            </select>
+
+            <!-- <optgroup> groups related options. -->
+            <select>
+                <optgroup label="Group A">
+                    <option>Option A</option>
+                </optgroup>
+            </select>
+
+            <!-- <datalist> provides suggestions for an input. -->
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Edge">
+            </datalist>
+
+            <!-- <fieldset> groups related form controls. -->
+            <fieldset>
+                <!-- <legend> gives a fieldset a caption. -->
+                <legend>Account</legend>
+                <input type="checkbox"> Remember me
+            </fieldset>
+
+            <!-- <output> displays the result of a calculation/action. -->
+            <output>Result: 10</output>
+
+            <!-- <progress> shows progress toward a known goal. -->
+            <progress value="70" max="100">70%</progress>
+
+            <!-- <meter> shows a measurement within a known range. -->
+            <meter min="0" max="100" value="80">80</meter>
+        </form>
+
+        <!-- ===================================================== -->
+        <!-- SEMANTIC ELEMENTS -->
+        <!-- ===================================================== -->
+
+        <!-- <article> represents a self-contained piece of content. -->
+        <article>
+            <h2>Article</h2>
+            <p>Article content.</p>
+        </article>
+
+        <!-- <aside> contains related or secondary content. -->
+        <aside>Related information.</aside>
+
+        <!-- <footer> contains footer information. -->
+        <footer>Footer content</footer>
+
+        <!-- <address> contains contact information. -->
+        <address>example@example.com</address>
+
+        <!-- <search> represents a section containing search controls. -->
+        <search>
+            <input type="search" placeholder="Search">
+        </search>
+
+        <!-- ===================================================== -->
+        <!-- INTERACTIVE ELEMENTS -->
+        <!-- ===================================================== -->
+
+        <!-- <details> creates expandable/collapsible content. -->
+        <details>
+            <!-- <summary> is the clickable label for <details>. -->
+            <summary>Click to open</summary>
+            <p>More information.</p>
+        </details>
+
+        <!-- <dialog> represents a dialog box/window. -->
+        <dialog open>Example dialog</dialog>
+
+        <!-- <menu> represents a list of commands/menu items. -->
+        <menu>
+            <li>Menu item</li>
+        </menu>
+
+        <!-- ===================================================== -->
+        <!-- SPECIAL TEXT ELEMENTS -->
+        <!-- ===================================================== -->
+
+        <!-- <bdi> isolates text so its direction can be handled independently. -->
+        <bdi>Text</bdi>
+
+        <!-- <bdo> overrides the direction of text. -->
+        <bdo dir="rtl">Right-to-left text</bdo>
+
+        <!-- <ruby> contains ruby annotations, often used for pronunciation. -->
+        <ruby>漢<rt>かん</rt></ruby>
+
+        <!-- <rt> contains ruby annotation text. -->
+
+        <!-- <rp> provides fallback parentheses around ruby text. -->
+        <ruby>漢<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>
+
+        <!-- <wbr> suggests a possible line-break position. -->
+        VeryLongWord<wbr>PossibleBreak
+
+        <!-- <dfn> identifies a term being defined. -->
+        <p><dfn>HTML</dfn> is a markup language.</p>
+
+        <!-- ===================================================== -->
+        <!-- OBSOLETE / DEPRECATED TAGS -->
+        <!-- ===================================================== -->
+
+        <!-- These are old tags. They may still work in some browsers, -->
+        <!-- but you should normally use modern HTML and CSS instead. -->
+
+        <!-- <acronym> = old acronym tag; use <abbr>. -->
+        <!-- <big> = old larger-text tag; use CSS. -->
+        <!-- <center> = old centering tag; use CSS text-align. -->
+        <!-- <font> = old font styling tag; use CSS. -->
+        <!-- <strike> = old strikethrough tag; use <s> or <del>. -->
+        <!-- <tt> = old teletype tag; use <code>, <kbd>, or CSS. -->
+        <!-- <marquee> = old scrolling-text tag; use CSS/JavaScript. -->
+        <!-- <frame> = old frame element; obsolete. -->
+        <!-- <frameset> = old frame container; obsolete. -->
+        <!-- <noframes> = old fallback for frames; obsolete. -->
+        <!-- <applet> = old Java applet element; obsolete. -->
+        <!-- <basefont> = old default-font element; use CSS. -->
+        <!-- <dir> = old directory list; use <ul>. -->
+        <!-- <isindex> = old search control; use <form> and <input>. -->
+        <!-- <keygen> = old key-generation control; obsolete. -->
+        <!-- <param> = old parameter element for <object>; obsolete. -->
+        <!-- <plaintext> = old raw-text element; obsolete. -->
+        <!-- <xmp> = old raw-text element; obsolete. -->
+        <!-- <rb> = old ruby-base element; obsolete. -->
+        <!-- <rtc> = old ruby-text container; obsolete. -->
+
+    </main>
+
+    <!-- End of the HTML tag reference. -->
+</body>
+</html>

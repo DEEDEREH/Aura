@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============================================================
+         CSS COMPLETE REFERENCE
+         This file teaches CSS properties, selectors, values, and rules.
+         The examples are written as real CSS inside <style>.
+         ============================================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference - Detailed Guide</title>
+
+    <style>
+        /* ============================================================
+           HOW CSS WORKS
+           ============================================================
+
+           A CSS rule normally looks like this:
+
+           selector {
+               property: value;
+           }
+
+           selector  = what HTML element(s) you want to change
+           property  = what part of the element you want to change
+           value     = how you want that property changed
+
+           Example:
+        */
+
+        p {
+            color: blue; /* color changes the text color */
+            font-size: 20px; /* font-size changes how large the text is */
+        }
+
+        /* ============================================================
+           SELECTORS
+           ============================================================ */
+
+        /* Element selector: selects every element of that type. */
+        h1 { color: navy; }
+
+        /* Class selector: selects elements with class="box". */
+        .box { padding: 20px; }
+
+        /* ID selector: selects the element with id="main". */
+        #main { margin: 10px; }
+
+        /* Universal selector: selects every element. */
+        * { box-sizing: border-box; }
+
+        /* Group selector: applies the same styles to several selectors. */
+        h1, h2, p { font-family: Arial, sans-serif; }
+
+        /* Descendant selector: selects p elements inside .card. */
+        .card p { line-height: 1.5; }
+
+        /* Child selector: selects only direct children. */
+        .menu > li { list-style: none; }
+
+        /* Adjacent sibling: selects the first p immediately after h2. */
+        h2 + p { margin-top: 0; }
+
+        /* General sibling: selects p elements after h2 at the same level. */
+        h2 ~ p { color: #333; }
+
+        /* Attribute selector: selects inputs whose type is text. */
+        input[type="text"] { border: 1px solid gray; }
+
+        /* ============================================================
+           COLORS
+           ============================================================ */
+
+        .colors {
+            color: #222222; /* Sets the text color. */
+            background-color: white; /* Sets the background color. */
+            border-color: black; /* Sets the color of an element's border. */
+            outline-color: blue; /* Sets the color of an outline. */
+            caret-color: red; /* Changes the blinking text cursor color. */
+            accent-color: blue; /* Changes the accent color of supported controls. */
+        }
+
+        /* Common color formats:
+           color: red;
+           color: #ff0000;
+           color: rgb(255, 0, 0);
+           color: rgba(255, 0, 0, 0.5);
+           color: hsl(0, 100%, 50%);
+           color: hsla(0, 100%, 50%, 0.5);
+        */
+
+        /* ============================================================
+           BACKGROUNDS
+           ============================================================ */
+
+        .backgrounds {
+            background-color: lightblue; /* Solid background color. */
+            background-image: url("image.jpg"); /* Uses an image as a background. */
+            background-repeat: no-repeat; /* Controls whether the image repeats. */
+            background-position: center; /* Controls where the image is positioned. */
+            background-size: cover; /* Makes the image cover the element. */
+            background-attachment: fixed; /* Controls whether the background scrolls. */
+            background-origin: border-box; /* Defines the background positioning area. */
+            background-clip: border-box; /* Defines how far the background is painted. */
+        }
+
+        /* Gradient examples: */
+        .linear-gradient {
+            background: linear-gradient(to right, blue, purple);
+            /* linear-gradient creates a smooth color transition in a direction. */
+        }
+
+        .radial-gradient {
+            background: radial-gradient(circle, white, blue);
+            /* radial-gradient creates a gradient spreading outward from a point. */
+        }
+
+        .conic-gradient {
+            background: conic-gradient(red, yellow, green, blue, red);
+            /* conic-gradient rotates colors around a center point. */
+        }
+
+        /* ============================================================
+           TEXT
+           ============================================================ */
+
+        .text {
+            color: black; /* Text color. */
+            text-align: center; /* Horizontal alignment: left, center, right, justify. */
+            text-align-last: center; /* Alignment of the last line of text. */
+            text-decoration-line: underline; /* Adds underline, overline, or line-through. */
+            text-decoration-color: red; /* Changes decoration color. */
+            text-decoration-style: wavy; /* solid, double, dotted, dashed, or wavy. */
+            text-decoration-thickness: 2px; /* Controls decoration thickness. */
+            text-transform: uppercase; /* uppercase, lowercase, capitalize, none. */
+            text-indent: 20px; /* Indents the first line. */
+            text-shadow: 2px 2px 4px gray; /* Adds a shadow behind text. */
+            letter-spacing: 2px; /* Changes space between letters. */
+            word-spacing: 5px; /* Changes space between words. */
+            line-height: 1.6; /* Controls vertical space between lines. */
+            white-space: normal; /* Controls wrapping and whitespace handling. */
+            word-break: normal; /* Controls where long words can break. */
+            overflow-wrap: break-word; /* Allows long words to wrap when necessary. */
+            hyphens: auto; /* Allows browser-controlled hyphenation. */
+            direction: ltr; /* Sets text direction: left-to-right or right-to-left. */
+            unicode-bidi: normal; /* Controls bidirectional text handling. */
+        }
+
+        /* ============================================================
+           FONTS
+           ============================================================ */
+
+        .fonts {
+            font-family: Arial, sans-serif; /* Chooses the typeface. */
+            font-size: 24px; /* Changes text size. */
+            font-weight: 700; /* Controls thickness: 100 through 900 where supported. */
+            font-style: italic; /* normal, italic, or oblique. */
+            font-variant: small-caps; /* Changes how characters are displayed. */
+            font-stretch: normal; /* Controls width/stretch when the font supports it. */
+            font-size-adjust: none; /* Adjusts perceived text size based on font metrics. */
+            font-optical-sizing: auto; /* Lets variable fonts adjust optical sizing. */
+        }
+
+        /* ============================================================
+           BOX MODEL
+           ============================================================
+
+           Every normal HTML element can be thought of as:
+
+           +---------------- margin ----------------+
+           | +--------------- border --------------+ |
+           | | +------------- padding ------------+ | |
+           | | |              content              | | |
+           | | +-----------------------------------+ | |
+           | +---------------------------------------+ |
+           +-------------------------------------------+
+        */
+
+        .box-model {
+            width: 300px; /* Content width by default. */
+            height: 150px; /* Content height by default. */
+            min-width: 100px; /* Prevents the element from becoming narrower than this. */
+            max-width: 800px; /* Prevents it from becoming wider than this. */
+            min-height: 50px; /* Minimum height. */
+            max-height: 500px; /* Maximum height. */
+            padding: 20px; /* Space INSIDE the border around the content. */
+            padding-top: 10px; /* Top inner spacing. */
+            padding-right: 20px; /* Right inner spacing. */
+            padding-bottom: 10px; /* Bottom inner spacing. */
+            padding-left: 20px; /* Left inner spacing. */
+            margin: 20px; /* Space OUTSIDE the border. */
+            margin-top: 10px; /* Top outside spacing. */
+            margin-right: 20px; /* Right outside spacing. */
+            margin-bottom: 10px; /* Bottom outside spacing. */
+            margin-left: 20px; /* Left outside spacing. */
+            box-sizing: border-box; /* Makes width/height include padding and border. */
+        }
+
+        /* ============================================================
+           BORDERS
+           ============================================================ */
+
+        .borders {
+            border: 2px solid black; /* Shorthand for width, style, and color. */
+            border-width: 2px; /* Border thickness. */
+            border-style: solid; /* solid, dashed, dotted, double, etc. */
+            border-color: black; /* Border color. */
+            border-radius: 1px; /* Rounds the corners. */
+            border-top: 3px solid red; /* Border only on top. */
+            border-right: 3px solid green; /* Border only on right. */
+            border-bottom: 3px solid blue; /* Border only on bottom. */
+            border-left: 3px solid purple; /* Border only on left. */
+            border-top-left-radius: 20px; /* Rounds one specific corner. */
+            border-image: none; /* Allows an image to be used as a border. */
+        }
+
+        /* ============================================================
+           DISPLAY & VISIBILITY
+           ============================================================ */
+
+        .display {
+            display: block; /* Takes its own line and normally fills available width. */
+            visibility: visible; /* visible or hidden; hidden keeps the element's space. */
+            opacity: 1; /* 0 is invisible, 1 is fully visible. */
+        }
+
+        /* Useful display values include:
+           display: none;       Completely removes the element from layout.
+           display: block;      Creates a block-level box.
+           display: inline;     Keeps content in the same line.
+           display: inline-block; Allows width/height while staying inline.
+           display: flex;       Creates a flexbox container.
+           display: grid;       Creates a grid container.
+           display: table;      Gives an element table-like layout behavior.
+        */
+
+        /* ============================================================
+           FLEXBOX
+           ============================================================ */
+
+        .flex-container {
+            display: flex; /* Turns this element into a flex container. */
+            flex-direction: row; /* Controls the main direction: row or column. */
+            flex-wrap: wrap; /* Allows items to move onto another line. */
+            flex-flow: row wrap; /* Shorthand for direction + wrap. */
+            justify-content: center; /* Aligns items along the main axis. */
+            align-items: center; /* Aligns items along the cross axis. */
+            align-content: center; /* Aligns multiple rows/columns of flex items. */
+            gap: 20px; /* Adds space between flex/grid items. */
+            row-gap: 10px; /* Space between rows. */
+            column-gap: 20px; /* Space between columns. */
+        }
+
+        .flex-item {
+            flex: 1 1 200px; /* Shorthand for grow, shrink, and basis. */
+            flex-grow: 1; /* Controls how much an item can grow. */
+            flex-shrink: 1; /* Controls how much an item can shrink. */
+            flex-basis: 200px; /* Starting size before remaining space is distributed. */
+            align-self: center; /* Overrides align-items for one item. */
+            order: 1; /* Changes visual order of a flex item. */
+        }
+
+        /* ============================================================
+           CSS GRID
+           ============================================================ */
+
+        .grid-container {
+            display: grid; /* Turns the element into a grid container. */
+            grid-template-columns: repeat(3, 1fr); /* Creates three equal columns. */
+            grid-template-rows: auto; /* Controls row sizes. */
+            grid-template-areas: "header header header" "main main side";
+            grid-column: 1 / 3; /* Places an item across grid columns. */
+            grid-row: 1 / 2; /* Places an item across grid rows. */
+            grid-area: main; /* Assigns an item to a named grid area. */
+            gap: 20px; /* Space between grid cells. */
+            grid-auto-flow: row; /* Controls how automatically placed items flow. */
+            grid-auto-columns: auto; /* Size of automatically created columns. */
+            grid-auto-rows: auto; /* Size of automatically created rows. */
+            justify-items: stretch; /* Horizontal alignment of items inside cells. */
+            align-items: stretch; /* Vertical alignment of items inside cells. */
+            justify-content: center; /* Aligns the whole grid horizontally. */
+            align-content: center; /* Aligns the whole grid vertically. */
+        }
+
+        /* ============================================================
+           POSITIONING
+           ============================================================ */
+
+        .positioning {
+            position: relative; /* Keeps the element in normal flow and creates a positioning reference. */
+            top: 10px; /* Moves a positioned element down. */
+            right: 10px; /* Moves it from the right edge. */
+            bottom: 10px; /* Moves it from the bottom edge. */
+            left: 10px; /* Moves it from the left edge. */
+            z-index: 10; /* Controls which positioned elements appear in front. */
+        }
+
+        /* Other position values:
+           position: static;   Normal positioning; offsets usually do nothing.
+           position: relative; Offsets from its normal position.
+           position: absolute; Positioned relative to a containing block.
+           position: fixed;    Positioned relative to the viewport.
+           position: sticky;   Acts relative until a scroll threshold is reached.
+        */
+
+        /* ============================================================
+           OVERFLOW & SCROLLING
+           ============================================================ */
+
+        .overflow {
+            overflow: auto; /* Adds scrolling only when content needs it. */
+            overflow-x: auto; /* Controls horizontal overflow. */
+            overflow-y: auto; /* Controls vertical overflow. */
+            text-overflow: ellipsis; /* Can show ... when overflowing text is clipped. */
+            resize: both; /* Allows the user to resize the element. */
+        }
+
+        /* ============================================================
+           SHADOWS & EFFECTS
+           ============================================================ */
+
+        .effects {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25); /* Shadow around a box. */
+            filter: blur(0); /* Applies visual effects such as blur, brightness, or contrast. */
+            mix-blend-mode: normal; /* Controls how an element blends with content underneath. */
+            isolation: auto; /* Controls whether an element creates a new stacking context. */
+        }
+
+        /* Common filter functions:
+           blur(5px)
+           brightness(120%)
+           contrast(150%)
+           grayscale(100%)
+           hue-rotate(90deg)
+           invert(100%)
+           opacity(50%)
+           saturate(200%)
+           sepia(100%)
+        */
+
+        /* ============================================================
+           TRANSFORMS
+           ============================================================ */
+
+        .transform {
+            transform: translateX(10px); /* Moves an element horizontally. */
+            transform-origin: center; /* Sets the point transformations happen around. */
+        }
+
+        /* Other transform functions:
+           translate(x, y)       Moves an element.
+           scale(x, y)           Makes an element larger/smaller.
+           rotate(angle)         Rotates an element.
+           skew(x, y)            Slants an element.
+           matrix(...)           Applies a 2D transformation matrix.
+           translate3d(...)      Moves an element in 3D space.
+           rotateX/Y/Z(...)      Rotates around a 3D axis.
+           scale3d(...)           Scales in 3D.
+        */
+
+        /* ============================================================
+           TRANSITIONS
+           ============================================================ */
+
+        .transition {
+            background: white;
+            transition-property: background, transform; /* Which properties animate. */
+            transition-duration: 0.3s; /* How long the animation takes. */
+            transition-timing-function: ease; /* Controls the speed curve. */
+            transition-delay: 0s; /* Wait time before the transition starts. */
+        }
+
+        .transition:hover {
+            background: lightblue;
+            transform: scale(1.05);
+        }
+
+        /* ============================================================
+           ANIMATIONS
+           ============================================================ */
+
+        .animation {
+            animation-name: exampleAnimation; /* Name of the @keyframes animation. */
+            animation-duration: 2s; /* How long one animation cycle lasts. */
+            animation-timing-function: ease-in-out; /* Speed curve. */
+            animation-delay: 0s; /* Delay before starting. */
+            animation-iteration-count: infinite; /* Number of times it runs. */
+            animation-direction: alternate; /* Controls forward/reverse direction. */
+            animation-fill-mode: both; /* Controls styles before/after animation. */
+            animation-play-state: running; /* running or paused. */
+        }
+
+        @keyframes exampleAnimation {
+            /* @keyframes defines the stages of a CSS animation. */
+            from { transform: translateX(0); }
+            to { transform: translateX(100px); }
+        }
+
+        /* ============================================================
+           LISTS
+           ============================================================ */
+
+        .lists {
+            list-style-type: square; /* Changes bullet/number style. */
+            list-style-position: inside; /* Places marker inside the list item's box. */
+            list-style-image: none; /* Can use an image as the marker. */
+        }
+
+        /* ============================================================
+           TABLES
+           ============================================================ */
+
+        .tables {
+            border-collapse: collapse; /* Combines adjacent table borders. */
+            border-spacing: 5px; /* Controls space between table cells. */
+            caption-side: top; /* Places a table caption at the top or bottom. */
+            empty-cells: show; /* Controls display of borders/background on empty cells. */
+            table-layout: auto; /* Controls how column widths are calculated. */
+        }
+
+        /* ============================================================
+           CURSOR & USER INTERACTION
+           ============================================================ */
+
+        .interaction {
+            cursor: pointer; /* Changes the mouse pointer. */
+            user-select: none; /* Controls whether text can be selected. */
+            pointer-events: auto; /* Controls whether an element receives pointer events. */
+            touch-action: auto; /* Controls browser handling of touch gestures. */
+            appearance: auto; /* Controls native appearance of supported controls. */
+        }
+
+        /* ============================================================
+           OBJECTS & IMAGES
+           ============================================================ */
+
+        .media-object {
+            object-fit: cover; /* Controls how an image/video fits inside its box. */
+            object-position: center; /* Controls the position of the fitted media. */
+            image-rendering: auto; /* Controls how images are rendered/scaled. */
+            aspect-ratio: 16 / 9; /* Sets a preferred width-to-height ratio. */
+        }
+
+        /* ============================================================
+           CSS VARIABLES / CUSTOM PROPERTIES
+           ============================================================ */
+
+        :root {
+            --main-color: #3366ff; /* A custom CSS variable. */
+            --space: 20px; /* Variables can store reusable values. */
+        }
+
+        .variables {
+            color: var(--main-color); /* var() retrieves a custom property. */
+            padding: var(--space);
+        }
+
+        /* ============================================================
+           FUNCTIONS
+           ============================================================ */
+
+        .functions {
+            width: calc(100% - 40px); /* calc() performs calculations. */
+            width: min(90%, 800px); /* min() chooses the smaller value. */
+            width: max(300px, 50%); /* max() chooses the larger value. */
+            width: clamp(300px, 70vw, 1000px); /* clamp() creates a min/preferred/max range. */
+            color: rgb(20 40 60); /* rgb() creates an RGB color. */
+            color: hsl(220 80% 50%); /* hsl() creates a color using hue, saturation, lightness. */
+        }
+
+        /* ============================================================
+           RESPONSIVE DESIGN
+           ============================================================ */
+
+        /* @media changes styles when a condition is true, such as screen width. */
+        @media (max-width: 700px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        /* @supports applies styles when a browser supports a feature. */
+        @supports (display: grid) {
+            .support-test {
+                display: grid;
+            }
+        }
+
+        /* ============================================================
+           PSEUDO-CLASSES
+           ============================================================ */
+
+        /* :hover applies while the pointer is over an element. */
+        a:hover { text-decoration: underline; }
+
+        /* :active applies while an element is being activated/clicked. */
+        button:active { transform: scale(0.98); }
+
+        /* :focus applies when an element receives keyboard/input focus. */
+        input:focus { outline: 2px solid blue; }
+
+        /* :visited applies to links the user has visited. */
+        a:visited { color: purple; }
+
+        /* :first-child selects an element that is the first child of its parent. */
+        li:first-child { font-weight: bold; }
+
+        /* :last-child selects an element that is the last child of its parent. */
+        li:last-child { margin-bottom: 0; }
+
+        /* :nth-child() selects elements by their position among siblings. */
+        li:nth-child(2) { color: red; }
+
+        /* :not() selects elements that do NOT match the selector inside it. */
+        p:not(.special) { color: #444; }
+
+        /* :disabled selects disabled form controls. */
+        button:disabled { opacity: 0.5; }
+
+        /* :checked selects checked checkboxes/radio buttons. */
+        input:checked { accent-color: green; }
+
+        /* :required selects required form controls. */
+        input:required { border-color: orange; }
+
+        /* ============================================================
+           PSEUDO-ELEMENTS
+           ============================================================ */
+
+        /* ::before inserts generated content before an element's content. */
+        .pseudo::before {
+            content: "★ ";
+        }
+
+        /* ::after inserts generated content after an element's content. */
+        .pseudo::after {
+            content: " ✓";
+        }
+
+        /* ::first-letter styles the first letter. */
+        .drop-cap::first-letter { font-size: 2em; }
+
+        /* ::first-line styles the first line of text. */
+        .first-line::first-line { font-weight: bold; }
+
+        /* ::selection styles text selected by the user. */
+        ::selection { background: yellow; }
+
+        /* ============================================================
+           LESS COMMON / ADVANCED PROPERTIES
+           ============================================================ */
+
+        .advanced {
+            all: unset; /* Resets or sets all properties at once. */
+            contain: none; /* Controls how much an element's layout/paint can affect other content. */
+            content-visibility: auto; /* Allows browsers to skip rendering off-screen content. */
+            object-fit: contain; /* Fits replaced content inside its box while preserving ratio. */
+            scroll-behavior: smooth; /* Makes scrolling animated instead of instant. */
+            scroll-margin: 20px; /* Adds scroll offset around an element. */
+            scroll-padding: 20px; /* Adds scroll padding to a scroll container. */
+            overscroll-behavior: contain; /* Controls scroll chaining at boundaries. */
+            writing-mode: horizontal-tb; /* Controls the direction text lines are laid out. */
+            tab-size: 4; /* Controls the width of tab characters. */
+            columns: 2; /* Creates a multi-column text layout. */
+            column-gap: 30px; /* Space between text columns. */
+            column-rule: 1px solid gray; /* Draws a line between columns. */
+            break-inside: avoid; /* Helps prevent content from breaking inside an element. */
+        }
+
+        /* ============================================================
+           AT-RULES QUICK REFERENCE
+           ============================================================
+
+           @charset     Declares the character encoding of a CSS file.
+           @import      Loads another CSS stylesheet.
+           @media       Applies CSS under conditions such as screen width.
+           @supports     Applies CSS if a feature is supported.
+           @font-face    Defines a downloadable/custom font.
+           @keyframes    Defines animation stages.
+           @layer        Creates a cascade layer for controlling priority.
+           @container    Applies styles based on a container's size/conditions.
+           @page         Controls print-page layout.
+        */
+
+        /* Example @font-face. Change the URL to a real font file. */
+        /*
+        @font-face {
+            font-family: "MyFont";
+            src: url("myfont.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+        }
+        */
+
+        /* Example cascade layer. */
+        @layer example {
+            .layer-example { padding: 10px; }
+        }
+
+        /* ============================================================
+           QUICK REMINDERS
+           ============================================================
+
+           px   = pixels; fixed CSS unit.
+           %    = percentage relative to another value.
+           em   = relative to the current/parent font size depending on property.
+           rem  = relative to the root HTML font size.
+           vw   = 1% of viewport width.
+           vh   = 1% of viewport height.
+           vmin = 1% of the smaller viewport dimension.
+           vmax = 1% of the larger viewport dimension.
+           fr   = fraction of available grid space.
+           auto = lets the browser calculate a value.
+
+           IMPORTANT:
+           CSS is not made of HTML "tags." CSS uses selectors, properties,
+           values, functions, pseudo-classes, pseudo-elements, and at-rules.
+        */
+    </style>
+</head>
+
+<body>
+    <!-- ============================================================
+         VISIBLE STUDY PAGE
+         ============================================================ -->
+    <header>
+        <h1>CSS Reference</h1>
+        <p>A detailed CSS study reference with real CSS examples and comments.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Basic Example</h2>
+            <p class="variables">This paragraph demonstrates CSS variables.</p>
+            <div class="borders box-model">This box demonstrates the CSS box model and borders.</div>
+            <div class="flex-container">
+                <div class="flex-item borders">Flex item 1</div>
+                <div class="flex-item borders">Flex item 2</div>
+                <div class="flex-item borders">Flex item 3</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Use the comments inside the &lt;style&gt; section as your CSS notes.</p>
+    </footer>
+</body>
+</html>

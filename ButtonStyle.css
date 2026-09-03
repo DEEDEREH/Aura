@@ -1,0 +1,18 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: #111;
+    color: #ffffff;
+    border: 1px solid #555;
+    padding: 10px 18px;
+    font-family: "Courier New", monospace;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+button:hover {
+    transform: scale(0.9);
+}

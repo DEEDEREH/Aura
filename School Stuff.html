@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>School Information | Jackson's Website</title>
+        <meta charser="UTF-8">
+        <meta name="keywords" content=">
+        <meta name="author" content="Jackson">
+        <meta http-equiv="refresh" content="10">
+        <link rel="icon" type="image/x-icon" href="">
+<link rel="stylesheet" href="ButtonStyle.css">
+
+<style>
+    body {
+        margin: 0;
+        background: #080808;
+        color: white;
+        font-family: 'Gill Sans', Calibri, sans-serif;
+    }
+
+    .moving-balls {
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(#f8f2f2 2px, transparent 2px);
+        background-size: 35px 35px;
+        animation: moveBalls 18s linear infinite;
+        opacity: .18;
+        z-index: -1;
+    }
+
+    @keyframes moveBalls {
+        to {
+            background-position: 350px 350px;
+        }
+    }
+
+    .title {
+        width: 800px;
+        margin: 50px auto 25px;
+        padding: 25px;
+        text-align: center;
+        background: #111;
+        border: 4px solid white;
+    }
+
+    .title h1 {
+        margin: 0;
+        font-size: 48px;
+    }
+
+    .title p {
+        color: #aaa;
+        font-size: 18px;
+    }
+
+    .school-box {
+        width: 800px;
+        margin: auto;
+        padding: 25px;
+        background: #111;
+        border: 4px solid white;
+    }
+
+    .school-box h2 {
+        margin-top: 0;
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+    }
+
+    .classes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .class-card {
+        background: #000;
+        border: 2px solid white;
+        padding: 20px;
+    }
+
+    .class-card h3 {
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    .class-card p {
+        color: #aaa;
+        line-height: 1.5;
+    }
+
+    .back {
+        text-align: center;
+        margin: 30px;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 20px;
+        text-align: center;
+        color: #666;
+        border-top: 2px solid #222;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="moving-balls"></div>
+
+<div class="title">
+    <h1>My Classes</h1>
+    <p>My classes and what I am learning.</p>
+</div>
+
+<div class="school-box">
+    <h2>My Classes</h2>
+
+    <div class="classes">
+
+        <div class="class-card">
+            <h3>ECS</h3>
+            <p>Information about my ECS class, assignments, and what I am learning.</p>
+            <a href="ECS.html">
+                <button>View Class</button>
+            </a>
+        </div>
+
+        <div class="class-card">
+            <h3>Health</h3>
+            <p>Information about my Health class and the topics we are learning.</p>
+            <a href="health.html">
+                <button>View Class</button>
+            </a>
+        </div>
+
+        <div class="class-card">
+            <h3>English</h3>
+            <p>Information about my English class and the topics we are learning.</p>
+            <a href="English.html">
+                <button>View Class</button>
+            </a>
+        </div>
+
+        <div class="class-card">
+            <h3>Math</h3>
+            <p>Information about my Math class and the topics we are learning.</p>
+            <a href="Math.html">
+                <button>View Class</button>
+            </a>
+        </div>
+
+        <div class="class-card">
+            <h3>Art</h3>
+            <p>Information about my Art class and the topics we are learning.</p>
+            <a href="art.html">
+                <button>View Class</button>
+            </a>
+        </div>
+
+        <div class="class-card">
+            <h3>Spanish</h3>
+            <p>Information about my Spanish class and the topics we are learning.</p>
+            <a href="Spanish.html">
+                <button>View Class</button>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="back">
+    <a href="index.html">
+        <button>Back to Home</button>
+    </a>
+</div>
+
+<footer>
+    Jackson's Website — My Classes
+</footer>
+
+</body>
+</html>

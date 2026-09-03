@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jackson's About Me</title> 
+    <meta charser="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jackson">
+    <meta http-equiv="refresh" content="10">
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="ButtonStyle.css">
+<style>
+    .header{
+        border-style: solid;
+        width: 400px;
+        text-align: center;
+        margin: 40px auto 20px;
+        border-width: 3px;
+        padding: 10px;
+        background-color: #161414;
+        
+    }
+
+    body {
+        margin: 0;
+        background: #080808;
+        color: white;
+        font-family: 'Gill Sans', Calibri, sans-serif;
+    }
+
+    .moving-balls {
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(#fffdfd 2px, transparent 2px);
+        background-size: 40px 40px;
+        animation: moveBalls 20s linear infinite;
+        opacity: .2;
+        z-index: -1;
+    }
+
+    @keyframes moveBalls {
+        to {
+            background-position: 400px 400px;
+        }
+    }
+
+    p {
+        border-style: double;
+        margin: auto;
+        text-align: center;
+        width: 40%;
+        background-color: #161414;
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 20px;
+        text-align: center;
+        color: #666;
+        border-top: 2px solid #222;
+    }
+
+    .back {
+        text-align: center;
+        margin: 30px;
+    }
+
+</style>
+</head>
+<body>
+    <div class="header">
+         <h1>Welcome to my About me!</h1>
+    </div>
+
+    <div class="moving-balls"></div>
+    <div class="section">
+        <p>
+            Hi, I'm Jackson. I've been interested in technology and gaming for a long time.
+            I started out playing games on Xbox, which got me more interested in gaming,
+            computers, and eventually creating things myself.
+        <br><br> 
+            Over time, I started getting into GTA FiveM, modeling, coding, and working
+            on different projects. I'm currently learning HTML and CSS and building my
+            own website to keep track of my school work, projects, and other things
+            I'm interested in. I also enjoy coming up with ideas for games and servers.
+            One of the bigger ideas I want to work on is a VR horror game about ghosts,
+            where players have to explore and deal with different paranormal events.
+        <br><br>
+            Outside of computers and gaming, I have two dogs named Charlie and Bimbo.
+            Charlie is a Blenheim Cavalier King Charles Spaniel, while Bimbo is a Ruby
+            Cavalier King Charles Spaniel. This website is a place where I can put my
+            projects, school information, and things I've created all in one place.
+        </p>
+    </div>
+        <footer>
+            Jackson's Wesbite-About Me
+        </footer>
+    <div class="back">
+        <a href="index.html">
+            <button>Back to Home</button>
+        </a>
+    </div>
+</body>    
+</html>

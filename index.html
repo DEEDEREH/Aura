@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jackson's Student Dashboard</title>
+    <meta charser="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jackson">
+    <meta http-equiv="refresh" content="10">
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="ButtonStyle.css">
+
+<style>
+    body{
+        margin:0;
+        background:#080808;
+        color:white;
+        font-family:"Courier New",monospace;
+        background-image:radial-gradient(#252525 1.5px,transparent 1.5px);
+        background-size:34px 34px;
+    }
+
+    header{
+        padding:20px 8%;
+        background:#101010;
+        border-bottom:2px solid #333;
+        color:#ffbf00;
+    }
+
+    .container{
+        width:75%;
+        max-width:1000px;
+        margin:30px auto;
+    }
+
+    .box{
+        background:#101010;
+        border:2px solid #333;
+        padding:25px;
+        margin-bottom:18px;
+    }
+
+    .welcome{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:30px;
+    }
+
+    .welcome-text{
+        flex:1;
+    }
+
+    h1{
+        margin:0 0 10px;
+    }
+
+    h2{
+        color:#ffbf00;
+        border-bottom:1px solid #333;
+        padding-bottom:10px;
+    }
+
+    p{
+        color:#777;
+    }
+
+    .quick{
+        border-left:1px solid #333;
+        padding-left:25px;
+    }
+
+    .quick h2{
+        margin-top:0;
+    }
+
+    .links{
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+    }
+
+    .notice{
+        padding:12px;
+        margin-bottom:18px;
+        border:1px solid #5a4500;
+        color:#ffbf00;
+        background:#151207;
+        overflow:hidden;
+        text-align:center;
+        font-weight:bold;
+    }
+
+    .notice span{
+        display:inline-block;
+        white-space:nowrap;
+        animation:move 9s linear infinite;
+    }
+
+    @keyframes move{
+        from{transform:translateX(100%);}
+        to{transform:translateX(-100%);}
+    }
+
+    .dashboard{
+        display:grid;
+        grid-template-columns:2fr 1fr;
+        gap:18px;
+    }
+
+    .info{
+        color:#777;
+        line-height:2;
+    }
+
+    .vault{
+        text-align:center;
+        margin-top:20px;
+    }
+
+    @media(max-width:750px){
+        .welcome{
+            display:block;
+        }
+
+        .quick{
+            border-left:0;
+            border-top:1px solid #333;
+            padding:20px 0 0;
+            margin-top:20px;
+        }
+
+        .dashboard{
+            grid-template-columns:1fr;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <header>STUDENT DASHBOARD</header>
+
+    <main class="container">
+
+    <div class="box welcome">
+
+    <div class="welcome-text">
+        <h1>Welcome to my Website!</h1>
+        <p>School information, projects, and more.</p>
+    </div>
+
+    <div class="quick">
+        <h2>QUICK LINKS</h2>
+
+    <div class="links">
+        <a href="School Stuff.html">
+            <button>SCHOOL</button>
+         </a>
+
+         <a href="Projects.html">
+            <button>PROJECTS</button>
+        </a>
+
+        <a href="aboutme.html">
+            <button>ABOUT</button>
+        </a>
+
+        <a href="Images.html">
+            <button>IMAGES</button>
+        </a>
+    </div>
+    </div>
+
+    </div>
+
+    <div class="notice">
+        <span>🚧 UNDER CONSTRUCTION — NEW CONTENT IS BEING ADDED 🚧</span>
+    </div>
+
+    <div class="dashboard">
+
+    <div class="box">
+        <h2>📚 SCHOOL INFORMATION</h2>
+
+        <p>
+            View my classes and information about school.
+        </p>
+
+        <a href="School Stuff.html">
+            <button>My classes</button>
+        </a>
+
+        <a href="Projects.html">
+                    <button>PROJECTS</button>
+        </a>
+
+        <a href="MySchool.html">
+                    <button>My School</button>
+        </a>
+    </div>
+
+    <div class="box">
+        <h2>STATUS</h2>
+
+    <div class="info">
+        <b>Name:</b> Jackson<br>
+        <b>Status:</b> Under CONSTRUCTION<br>
+        <b>Website:</b> Online<br>
+        <b>Version:</b> 0.3
+    </div>
+    </div>
+
+    </div>
+
+    <div class="vault">
+        <a href="vault.html">
+        <button>🔒 VAULT</button>
+        </a>
+    </div>
+
+    </main>
+
+</body>
+</html>
