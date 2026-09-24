@@ -1,28 +1,144 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Art | Jackson's Website</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="ClassStyle.css">
-<link rel="stylesheet" href="ButtonStyle.css">
-</head>
-<body>
-<div class="moving-balls"></div>
-<div class="header">
-    <h1>Art</h1>
-    <p>NA</p>
-</div>
-<div class="back">
-    <a href="index.html">
-        <button>Back to Home</button>
-    </a>
+    <head>
+        <title>Art | Jackson's Website</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="art, class">
+        <meta name="author" content="Jackson">
+        <meta http-equiv="refresh" content="10">
+        <link rel="icon" type="image/x-icon" href="Images/book.png">
+        <link rel="stylesheet" href="Main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .art {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                width: 1000px;
+                margin: auto;
+                margin-top: 20px;
+            }
 
-    <a href="School Stuff.html">
-        <button>Back to My Classes</button>
-    </a>
-</div>
-<footer>
-    Jackson's Website — Art
-</footer>
-</body>
+            .art img {
+                width: 100%;
+                height: 300px;
+                object-fit: contain;
+                display: block;
+                border: 4px solid;
+                border-radius: 15px;
+                padding: 10px;
+                box-sizing: border-box;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+                transition: 0.5s;
+            }
+
+            .art img:hover {
+                transform: scale(1.03);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            body {
+                margin: 0;
+                background: #080808;
+                color: white;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            }
+
+            .header {
+                width: 930px;
+                margin: 30px auto 15px;
+                padding: 20px;
+                background: #111;
+                border: 2px solid #fffffe;
+                text-align: center;
+                border-left: 4px solid white;
+            }
+
+            .header h1 {
+                margin: 0;
+                color: #fffefc;
+                font-size: 42px;
+            }
+
+            p {
+                width: 60%;
+                margin: 30px auto;
+                padding: 20px 25px;
+                background-color: #151515;
+                border: 1px solid white;
+                border-left: 4px solid white;
+                color: #d6d6d6;
+                text-align: center;
+                line-height: 1.7;
+                font-size: 17px;
+            }
+            .back {
+                text-align: center;
+                margin: 25px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            footer {
+                margin-top: 40px;
+                padding: 20px;
+                border-top: 1px solid #222;
+                text-align: center;
+                color: #555;
+            }
+
+            h3 {width: 61%;
+                margin: 25px auto;
+                padding: 15px 20px;
+                background-color: #151515;
+                border: 1px solid white;
+                border-left: 4px solid white;
+                color: #d6d6d6;
+                text-align: center;
+                line-height: 1.7;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="orb"></div>
+
+        <div class="header">
+            <h1>Art</h1>
+            <h2>Welcone to my Art class page!</h2>
+        </div>
+
+        <p>The two images below are the project that me and my class all worked on as one, The image on the left is my piece of the drawing. And the image on the right is the full thing
+        The image is meant to be Alice in the Wonderland which I dont know much about but it seems pretty cool! And the 3rd Image is just a fun album cover that I made in class!
+        </p>
+
+        <div class="art">
+
+            <img src="Images/artpng.png" alt="art1">
+
+            <img src="Images/artgrid.jpg" alt="art2">
+
+            <img src="Images/artthing.png" alt="art3">
+        </div>
+
+        <div class="back">
+            <a href="index.html">
+                <button>Back to Home</button>
+            </a>
+
+            <a href="School Stuff.html">
+                <button>Back to My Classes</button>
+            </a>
+        </div>
+        <footer style="font-size: 15px;">
+            Jackson's Website — Art
+        </footer>
+    </body>
 </html>

@@ -1,28 +1,192 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Math | Jackson's Website</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="ClassStyle.css">
-<link rel="stylesheet" href="ButtonStyle.css">
-</head>
-<body>
-<div class="moving-balls"></div>
-<div class="header">
-    <h1>Math</h1>
-    <p>NA</p>
-</div>
-<div class="back">
-    <a href="index.html">
-        <button>Back to Home</button>
-    </a>
+    <head>
+        <title>Math | Jackson's Website</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="MATH, class">
+        <meta name="author" content="Jackson">
+        <meta http-equiv="refresh" content="300">
+        <link rel="icon" type="image/x-icon" href="Images/book.png">
+        <link rel="stylesheet" href="Main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .graph {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                width: 1000px;
+                margin: auto;
+                margin-top: 20px;
+            }
+            
+            .graph img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border: 4px solid;
+                border-radius: 15px;
+                padding: 10px;
+                box-sizing: border-box;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+                transition: 0.5s;
+            }
 
-    <a href="School Stuff.html">
-        <button>Back to My Classes</button>
-    </a>
-</div>
-<footer>
-    Jackson's Website — Math
-</footer>
-</body>
+            .graph img:hover {
+                transform: scale(1.03);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+            }
+
+            .spreadsheet {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                width: 1000px;
+                margin: 20px auto 0;
+            }
+
+            .spreadsheet iframe,
+            .spreadsheet video {
+                width: 100%;
+                height: 500px;
+                display: block;
+                border: 4px solid;
+                border-radius: 15px;
+                padding: 0;
+                box-sizing: border-box;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+                overflow: hidden;
+                transition: 0.5s;
+            }
+
+            .spreadsheet iframe:hover,
+            .spreadsheet video:hover {
+                transform: scale(1.01);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+            }
+
+            body {
+                margin: 0;
+                background: #080808;
+                color: white;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            }
+
+            .header {
+                width: 930px;
+                margin: 30px auto 15px;
+                padding: 20px;
+                background: #111;
+                border: 2px solid #fffffe;
+                text-align: center;
+                border-left: 4px solid white;
+            }
+
+            .header h1 {
+                margin: 0;
+                color: #fffefc;
+                font-size: 42px;
+            }
+
+            p {
+                width: 60%;
+                margin: 30px auto;
+                padding: 20px 25px;
+                background-color: #151515;
+                border: 1px solid white;
+                border-left: 4px solid white;
+                color: #d6d6d6;
+                text-align: center;
+                line-height: 1.7;
+                font-size: 17px;
+            }
+            .back {
+                text-align: center;
+                margin: 25px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            footer {
+                margin-top: 40px;
+                padding: 20px;
+                border-top: 1px solid #222;
+                text-align: center;
+                color: #555;
+            }
+
+            h3 {width: 61%;
+                margin: 25px auto;
+                padding: 15px 20px;
+                background-color: #151515;
+                border: 1px solid white;
+                border-left: 4px solid white;
+                color: #d6d6d6;
+                text-align: center;
+                line-height: 1.7;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="orb"></div>
+
+        <div class="header">
+            <h1>Math</h1>
+            <h2>Welcome to my Webpage about my Math class</h2>
+        </div>
+
+        <div class="test">
+            <p>In this Section I will be presenting my Minecraft rollercoaster with all of its data!<br>
+                Below is the all the data that i gathered from the coaster by stopping every second then inputting the X, Y, and Z coordinates
+            </p>
+        </div>
+
+        <h3>Some of my data from the rollercoaster</h3>
+
+        <div class="graph">
+
+            <img src="Images/graph1.png" alt="graph1">
+
+            <img src="Images/graph2.png" alt="graph2">
+
+            <img src="Images/graph3.png" alt="graph3">
+
+        </div>
+
+        <h3>Video of my rollercoaster and a sheet of the rest of the Data from the coaster</h3>
+        <div class="spreadsheet">
+
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdaFg2cZ_2iDkvFtZmGzUqbxIRzS19Z8GRrbokvXQfRDHYnyn6OqmmjoxsW9fLovdp5M7C7ikEO2I/pubhtml?widget=true&amp;headers=false">
+            </iframe>
+
+            <video controls>
+                <source src="Coaster.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+
+        <p>The rollercoaster is meant to be a more cal coaster with instead morw like an adventure with the fun bubble elevator and backrooms section.
+             There is many turns whic increases the displacemnt amount. The music also increases the feeling of being alone and not knowing whats around the corner.
+            I tried for the coaster to not have many up and downs to increase feeling of an unknowing adventure and with simple waiting area to give rider's the least amount of information on what there riding.</p>
+
+        <div class="back">
+
+            <a href="index.html">
+                <button>Back to Home</button>
+            </a>
+
+            <a href="School Stuff.html">
+                <button>Back to My Classes</button>
+            </a>
+
+        </div>
+
+        <footer style="font-size: 15px;">
+            Jackson's Website — Math
+        </footer>
+    </body>
 </html>

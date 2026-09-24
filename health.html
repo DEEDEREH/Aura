@@ -1,34 +1,162 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Health | Jackson's Website</title>
-    <meta charset="UTF-8">
-    <meta name="keywords" ">
-    <meta name="author" content="Jackson">
-    <meta http-equiv="refresh" content="10">
-    <link rel="icon" type="image/x-icon" href="">
-    <link rel="stylesheet" href="ClassStyle.css">
-    <link rel="stylesheet" href="ButtonStyle.css">
-</head>
-<body>
-    <div class="moving-balls"></div>
-    <div class="header">
-        <h1>Health</h1>
-        <h2>Description of a healthy snack</h2>
-    </div>
-    <p>test</p>
-    
-    <div class="back">
-        <a href="index.html">
-            <button>Back to Home</button>
-        </a>
+    <head>
+        <title>Health | Jackson's Website</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="health, class">
+        <meta name="author" content="Jackson">
+        <meta http-equiv="refresh" content="10">
+        <link rel="icon" type="image/x-icon" href="Images/book.png">
+        <link rel="stylesheet" href="Main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <a href="School Stuff.html">
-            <button>Back to My Classes</button>
-        </a>
-    </div>
-    <footer>
-        Jackson's Website — Health -_-
-    </footer>
-</body>
+        <style>
+            body {
+                margin: 0;
+                background: #080808;
+                color: white;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            .header {
+                width: 930px;
+                margin: 30px auto 15px;
+                padding: 20px;
+                background: #111;
+                border: 2px solid #fffffe;
+                text-align: center;
+                border-left: 4px solid white;
+            }
+
+            p {
+                width: 60.5%;
+                margin: 30px auto;
+                padding: 20px 25px;
+                background-color: #151515;
+                border: 1px solid white;
+                border-left: 4px solid white;
+                color: #d6d6d6;
+                text-align: center;
+                line-height: 1.7;
+                font-size: 17px;
+            }
+
+            .header h1 {
+                margin: 0;
+                color: #fffefc;
+                font-size: 42px;
+            }
+
+            .header h2 {
+                font-weight: normal;
+            }
+
+            .health-table {
+                width: 65%;
+                margin: 30px auto;
+                border-collapse: collapse;
+                background-color: #151515;
+            }
+
+            .health-table th,
+            .health-table td {
+                border: 1px solid white;
+                padding: 15px 20px;
+                text-align: center;
+            }
+
+            .health-table th {
+                background-color: #111;
+                color: white;
+                font-size: 18px;
+            }
+
+            .health-table td {
+                color: #d6d6d6;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .back {
+                text-align: center;
+                margin: 25px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            footer {
+                margin-top: 40px;
+                padding: 20px;
+                border-top: 1px solid #222;
+                text-align: center;
+                color: #555;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="orb"></div>
+
+        <div class="header">
+            <h1>Health</h1>
+            <h2>A healthy snack bar that my group and I have created!</h2>
+        </div>
+
+        <p>
+            In this page, I will be showing my groups recipe for a healthy snack bar!
+        </p>
+
+        <table class="health-table">
+            <tr>
+                <th>Ingredients</th>
+                <th>Type of Macronutrient</th>
+                <th>How Will It Help Your Needs?</th>
+            </tr>
+
+            <tr>
+                <td>Banana</td>
+                <td>Carbohydrates</td>
+                <td>Bananas are a perfect source of quick and easy energy!</td>
+            </tr>
+
+            <tr>
+                <td>Nuts</td>
+                <td>Fats</td>
+                <td>Nuts are great for quick and effcient food to fill you up</td>
+            </tr>
+
+            <tr>
+                <td>Sunflower Butter</td>
+                <td>Fats</td>
+                <td>Sunflower Butter is also another good source of food and is a great binder for foods!</td>
+            </tr>
+
+            <tr>
+                <td>Greek Yogurt</td>
+                <td>Protiens</td>
+                <td>Greek yogurt is great for a base because you can add nuts or oats and holds a lot of protien</td>
+            </tr>
+
+             <tr>
+                <td>oats</td>
+                <td>Carbohydrates</td>
+                <td>oats are a great snack with giving you a lot of fiber and Carbohydrates </td>
+            </tr>
+        </table>
+        <div class="back">
+            <a href="index.html">
+                <button>Back to Home</button>
+            </a>
+
+            <a href="School Stuff.html">
+                <button>Back to My Classes</button>
+            </a>
+        </div>
+
+        <footer style="font-size: 15px;">
+            Jackson's Website — Health -_-
+        </footer>
+    </body>
 </html>
